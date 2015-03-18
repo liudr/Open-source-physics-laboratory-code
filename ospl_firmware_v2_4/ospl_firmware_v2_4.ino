@@ -3,8 +3,8 @@
  *  \details   This software requires phi_interfaces and phi_prompt libraries for user interaction. It also needs sdfat library for SD card, RTCLib library for real time clock, and I2CDev library for the sensor board.
  * This sample code only uses simple functions from phi_prompt library. For more control over the aspects of the library, read the phi_prompt documentation and try other functions.
  *  \author    Dr. John Liu
- *  \version   2.4.5
- *  \date      03/09/2015
+ *  \version   2.4.6
+ *  \date      03/18/2015
  *  \pre       Compatible with Arduino IDE 1.0.6, and 1.6.0, with OSPL modifications.
  *  \warning   PLEASE DO NOT REMOVE THIS COMMENT WHEN REDISTRIBUTING! No warranty!
  *  \copyright GNU GPL V3.0
@@ -20,6 +20,7 @@
  * <a href="http://liudr.wordpress.com/phi-2-shield/">http://liudr.wordpress.com/phi-2-shield/</a>
  *
  *  \par Updates
+ * 03/18/2015: Created github repository open-source-physics-laboratory-code to host firmware and sample code
  * 03/09/2015: Added adjusting delay parameters and credits.
  * 03/05/2015: Changed to .TXT file. Added adjusting clock.
  * 03/04/2015: Displaying clock has been added under I2C.
