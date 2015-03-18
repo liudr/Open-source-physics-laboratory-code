@@ -1,0 +1,1 @@
+This repository contains both firmware code and sample code for the open source physics laboratory.
