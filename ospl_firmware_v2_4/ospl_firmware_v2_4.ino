@@ -20,7 +20,7 @@
  * <a href="http://liudr.wordpress.com/phi-2-shield/">http://liudr.wordpress.com/phi-2-shield/</a>
  *
  *  \par Updates
- * 03/18/2015: Created github repository open-source-physics-laboratory-code to host firmware and sample code \n
+ * 03/18/2015: Created github repository open-source-physics-laboratory-code to host firmware and sample code. Added setting RTC in case it is not running. \n
  * 03/09/2015: Added adjusting delay parameters and credits. \n
  * 03/05/2015: Changed to .TXT file. Added adjusting clock. \n
  * 03/04/2015: Displaying clock has been added under I2C. \n
@@ -345,6 +345,12 @@ void setup()
     logfile.println(F("RTC failed"));
     //msg_serial(sd_msg_04);//lcdPanel.println("RTC failed");
     while(1){;}
+  }
+  if (!RTC.isrunning())
+  {
+    Serial.println("RTC is NOT running!");
+    // following line sets the RTC to the date & time this sketch was compiled
+    RTC.adjust(DateTime(__DATE__, __TIME__));
   }
 }
 
