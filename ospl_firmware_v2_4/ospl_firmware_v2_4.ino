@@ -20,42 +20,42 @@
  * <a href="http://liudr.wordpress.com/phi-2-shield/">http://liudr.wordpress.com/phi-2-shield/</a>
  *
  *  \par Updates
- * 03/18/2015: Created github repository open-source-physics-laboratory-code to host firmware and sample code
- * 03/09/2015: Added adjusting delay parameters and credits.
- * 03/05/2015: Changed to .TXT file. Added adjusting clock.
- * 03/04/2015: Displaying clock has been added under I2C.
- * 03/03/2015: Added data logging to the routine. Sending to serial port is replaced by saving to sd card if sd card exists (SD_card_present=1).
- * 03/02/2015: Added code to support SD card and RTC. Need to clean up the code and test it.
- * 02/13/2015: Updated a few string values.
- * 02/12/2015: Made main code and phi_prompt library compatible with Arduino IDE 1.6.0. Also removed older definitions from firmware version 2.4.1.
- * 02/10/2015: Adding hardware pin assignment for PCB version 2.4.5
- * 11/06/2013: Modified regulated_voltage to 5.00 for AC adapter or battery operation.
- * 10/07/2013: Added Vernier conductivity probe 3 settings.
- * 07/12/2013: Adjusted the behavior for turning the knob.
- * 07/11/2013: Added ADXL345 BMP085 and HMC5883L support. Also moved menus and formatting texts to PROGMEM.
- * 01/11/2013: Added PASCO sonic ranger support to sonic ranger.
- * 01/10/2013: Added OSPL sonic ranger code.
- * 01/08/2013: Added Vernier sonic ranger code and analog/digital sensor selection screen. Added mockup photogate screen.
- * 01/03/2013: Modified auto_ID_pullup value to 10Kohm to correspond to what I soldered on the V 2.0 prototype.
- * 01/02/2013: Modified to use on OSPL V2.0 hardware.
- * 09/26/2012: Added an AUTO_ID resistor sensing routine to find out these resistor values. Fixed problem on channel 1 auto_id reading. Student didn't solder the IC socket well enough to the PCB so A3 is not connected to channel 1.
+ * 03/18/2015: Created github repository open-source-physics-laboratory-code to host firmware and sample code \n
+ * 03/09/2015: Added adjusting delay parameters and credits. \n
+ * 03/05/2015: Changed to .TXT file. Added adjusting clock. \n
+ * 03/04/2015: Displaying clock has been added under I2C. \n
+ * 03/03/2015: Added data logging to the routine. Sending to serial port is replaced by saving to sd card if sd card exists (SD_card_present=1). \n
+ * 03/02/2015: Added code to support SD card and RTC. Need to clean up the code and test it. \n
+ * 02/13/2015: Updated a few string values. \n
+ * 02/12/2015: Made main code and phi_prompt library compatible with Arduino IDE 1.6.0. Also removed older definitions from firmware version 2.4.1. \n
+ * 02/10/2015: Adding hardware pin assignment for PCB version 2.4.5 \n
+ * 11/06/2013: Modified regulated_voltage to 5.00 for AC adapter or battery operation. \n
+ * 10/07/2013: Added Vernier conductivity probe 3 settings. \n
+ * 07/12/2013: Adjusted the behavior for turning the knob. \n
+ * 07/11/2013: Added ADXL345 BMP085 and HMC5883L support. Also moved menus and formatting texts to PROGMEM. \n
+ * 01/11/2013: Added PASCO sonic ranger support to sonic ranger. \n
+ * 01/10/2013: Added OSPL sonic ranger code. \n
+ * 01/08/2013: Added Vernier sonic ranger code and analog/digital sensor selection screen. Added mockup photogate screen. \n
+ * 01/03/2013: Modified auto_ID_pullup value to 10Kohm to correspond to what I soldered on the V 2.0 prototype. \n
+ * 01/02/2013: Modified to use on OSPL V2.0 hardware. \n
+ * 09/26/2012: Added an AUTO_ID resistor sensing routine to find out these resistor values. Fixed problem on channel 1 auto_id reading. Student didn't solder the IC socket well enough to the PCB so A3 is not connected to channel 1. \n
  * 08/19/2012: Changed the direct temp probe a b and unit from 100, 0, F to 55.55 -17.7 C.
  * After some testing with internal pullup and two external pulldown I found out the internal pullup to be around 32K ohm and the voltage drop across the gate (enabling the internal pullup) to be 0.35V.
  * I measured regulated voltage to be 5.05V both with USB and Vin.
  * So effectively the voltage divider with internal pullup and one external pulldown resistor is 4.7V. After these numbers were entered into the formula, the temperature reading of the TMP-BTA is around 0.5C apart from LabQuest between 25C and 50C.
- * More accurate measurement could make the reading more accurate but at the moment the problem is solved.
+ * More accurate measurement could make the reading more accurate but at the moment the problem is solved. \n
  * 08/18/2012: Added Vernier gas pressure sensor (GPS-BTA) to the list of sensors. This sensor has a different a value than the Pressure sensor (PS-DIN).
  * Added Veriner temperature sensor (TMP-BTA) and modified the read_channel to read voltage divider and convert to temperature with Steinhart-Hart equation.
  * I realized that one needs a pullup resistor when using the TMP-BTA but when a 10K ohm external pullup resistor is used with analog sensors, the reading are off, far off for DT-DIN (should be 0.75V but saw 4.4V)
  * I later desoldered the external pullup and measured the internal pullup to be around 38.9K ohm. I programmed the select_sensors() to engage internal pullup for TMP-BTA and disengage it for other sensors.
- * The result is not very accurate. When calibrated for 20 C the reading will be off about more than 1 C at 40 C. I will investigate it with external pullup to see if the internal pullup/its enabling gate is the source of the problem.
- * 02/29/2012: Tested the system to work perfectly with numbers and PC upload.
- * 02/28/2012: Fixed floating point printing problem with format_fp() function.
- * 02/24/2012: Tested on dual force sensor and student force sensor. The floating point printing is not correct when printing negative numbers and when it gets close to X.0
- * 02/20/2012: To be tested on prototype.
- * 02/19/2012: Added select_sensors(), list_sensors(), display_sensors(), read_sensor() and format_output().
- * 02/18/2012: The code was tested to work on phi-2 shield with 20x4 display.
- * 02/15/2012: The code was tested to work on phi-lab.
+ * The result is not very accurate. When calibrated for 20 C the reading will be off about more than 1 C at 40 C. I will investigate it with external pullup to see if the internal pullup/its enabling gate is the source of the problem. \n
+ * 02/29/2012: Tested the system to work perfectly with numbers and PC upload. \n
+ * 02/28/2012: Fixed floating point printing problem with format_fp() function. \n
+ * 02/24/2012: Tested on dual force sensor and student force sensor. The floating point printing is not correct when printing negative numbers and when it gets close to X.0 \n
+ * 02/20/2012: To be tested on prototype. \n
+ * 02/19/2012: Added select_sensors(), list_sensors(), display_sensors(), read_sensor() and format_output(). \n
+ * 02/18/2012: The code was tested to work on phi-2 shield with 20x4 display. \n
+ * 02/15/2012: The code was tested to work on phi-lab. \n
 */
 
 #include <EEPROM.h>
@@ -76,7 +76,7 @@
 
 int useless;
 // Please don't modify this section. Find the end of this section and you may modify content beyond the end.
-#define OSPL_V2_4
+#define OSPL_V2_4               ///< This is a compiler switch that makes sure the correct pins are used for the specified OSPL PCB version. Different versions of the PCB use different pins for LCD, for instance.
 
 #define total_channels 3        ///< There are a total of 3 analog sensor channels on OSPL. If you connected the jumpers inside the unit to wire I2C to the last channel, you will only have 2 left.
 #define UI_delay_def 200        ///< Delay when running the prototype with LCD output
